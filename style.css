@@ -1,0 +1,97 @@
+:root {
+    --Brigh-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(176, 54%, 21%);
+    --Transparent-white-paragraphs-: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray : hsl(0, 0%, 95%);
+    /*font-family: 'Big Shoulders Display', cursive;
+      font-family: 'Lexend Deca', sans-serif;*/
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-width: 375px;
+    max-width: 1440px;
+    min-height: 100vh;
+    background-color: var(--Very-light-gray);
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 900px;
+    height: 450px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+}
+.item-1 {
+    height: 100%;
+    flex-basis: 33.33%;
+    background-color: var(--Brigh-orange);
+}
+.item-2 {
+    height: 100%;
+    flex-basis: 33.33%;
+    background-color: var(--Dark-cyan);
+}
+.item-3 {
+    height: 100%;
+    flex-basis: 33.33%;
+    background-color: var(--Very-dark-cyan);
+}
+.content {
+    margin: 2.5rem 3.5rem 2rem 2rem;
+}
+.heading {
+    text-transform: uppercase;
+    color: var(--Very-light-gray);
+    font-family: 'Big Shoulders Display', cursive;
+    margin-top: 1.5rem;
+}
+.detail {
+    color: var(--Transparent-white-paragraphs-);
+    font-family: 'Lexend Deca', sans-serif;
+    margin-top: 1.5rem;
+    line-height: 1.5;
+}
+.btn {
+    text-transform: capitalize;
+    background-color: var(--Very-light-gray);
+    font-family: 'Lexend Deca', sans-serif;
+    margin-top: 5rem;
+    height: 2.5rem;
+    width: 60%;
+    border-radius: 2rem;
+    border: 1px solid var(--Very-light-gray);
+    cursor: pointer;
+}
+.btn:active { background-color: transparent;}
+.btn-orange:active { color: var(--Very-light-gray);}
+.btn-dark-cyan:active { color: var(--Very-light-gray);}
+.very-dark-cyan:active { color: var(--Very-light-gray);}
+
+.btn-orange { color: var(--Brigh-orange);}
+.btn-dark-cyan { color: var(--Dark-cyan);}
+.very-dark-cyan { color: var(--very-Dark-cyan);}
+
+@media (max-width: 810px) and (min-width:375px) {
+    .container {
+        margin: 1rem;
+        flex-direction: column;
+        flex-basis: 300px;
+        height: 1350px;
+    }
+}
+@media (max-width: 375px) {
+    .container {
+        margin: 0.5rem;
+        width: 90%;
+        height: fit-content;
+        flex-direction: column;
+    }
+}
